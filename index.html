@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://localhost/fms/index.php -->
+<html style="height: auto; min-height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="HandheldFriendly" content="true">
+    
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> FARMERS MANAGEMENT| Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="./index_files/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./index_files/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="./index_files/ionicons.min.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="./index_files/jquery-jvectormap.css">
+   <!-- Select2 -->
+  <link rel="stylesheet" href="./index_files/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./index_files/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="./index_files/_all-skins.min.css">
+  
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<style type="text/css">
+.special{
+ background: linear-gradient(to left, green, green);
+ color:white;
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+} 
+</style><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;box-sizing: content-box;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+
+<body class="skin-blue sidebar-mini" style="height: auto; min-height: 100%;">
+<div class="wrapper" style="height: auto; min-height: 100%;">
+
+  <header class="main-header" style="">
+    <!-- Logo -->
+    <a href="http://localhost/fms/index.php#" class="logo" style="background: linear-gradient(to right, blue, blue);">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>ST</b>P</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>FARM MANAGEMENT</b>|ADMIN</span>
+    </a>
+
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top" style="background: linear-gradient(to right, green, green);">
+      <!-- Sidebar toggle button-->
+      
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          
+         
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu" onclick="window.location.href=&#39;?page=mysales&#39;;">
+            <a href="http://localhost/fms/index.php#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="./index_files/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span>My Product</span>
+            </a>
+         
+          </li>
+          <li class="dropdown user user-menu">
+            <a href="http://localhost/fms/index.php?page=print">
+              <span>Print receipt</span>
+            </a>
+         
+          </li>
+          <li>
+            <a onclick="window.location.href=&#39;?page=expiry&#39;;" text="reorder list">expiry list</a>
+          </li>
+            <li>
+            <a onclick="window.location.href=&#39;logout.php&#39;;" text="Sign out" data-toggle="control-sidebar"><i class="fa fa-sign-in"></i></a>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+                  
+        </ul>
+      </div>
+
+    </nav>
+  </header>  <!-- Left side column. contains the logo and sidebar -->
+    <style type="text/css">
+     body {
+     /* margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: cornsilk;*/
+  }
+
+  #mylist {
+      padding: 0;
+      list-style-type: none;
+
+  }
+
+  #mylist li {
+      box-sizing: border-box;
+      width: 10em;
+      height: 3em;
+      font-size: 20px;
+      border-radius: 0.5em;
+      margin: 0.5em;
+      box-shadow: 0 0 1em rgba(0,0,0,0.2);
+      color: white;
+      font-family: sans-serif;
+      text-transform: capitalize;
+      line-height: 3em;
+      transition: 0.3s;
+      cursor: pointer;
+      margin-bottom: 20px;
+  }
+
+  a{
+    color: white;
+  }
+  a:hover{
+    color: white;
+  }
+
+  #mylist li:nth-child(odd) {
+      background: linear-gradient(to right, green, green);
+      text-align: left;
+      padding-left: 10%;
+      transform: perspective(700px) rotateY(45deg);
+  }
+
+  #mylist li:nth-child(even) {
+      background: linear-gradient(to left, green, green);
+      text-align: right;
+      padding-right: 10%;
+      transform: perspective(700px) rotateY(-45deg);
+  }
+
+  #mylist li:nth-child(odd):hover {
+      transform: perspective(200px) rotateY(45deg);
+      padding-left: 5%;
+  }
+
+  #mylist li:nth-child(even):hover {
+      transform: perspective(200px) rotateY(-45deg);
+      padding-right: 5%;
+  }
+
+
+
+   </style>
+   <aside class="main-sidebar" style="width: 300px;padding: 30px;">
+    <ul style="margin-top: 20%;margin-left: 20%;" id="mylist">
+        <a href="http://localhost/fms/index.php?page="><li>Home</li></a>
+    <a href="http://localhost/fms/index.php?page=newitem"><li>New Product</li></a>
+    <a href="http://localhost/fms/index.php?page=newcategory"><li>Categories</li></a>
+    <a href="http://localhost/fms/index.php?page=inventory"><li>Add Stock</li></a>
+    <a href="http://localhost/fms/index.php?page=sales"><li>Sales/Remove</li></a>
+    <a href="http://localhost/fms/index.php?page=account"><li>Account</li></a>
+    <a href="http://localhost/fms/index.php?page=edit"><li>Edit</li></a>
+    <a href="http://localhost/fms/index.php?page=changepassword"><li>Change password</li></a>
+      </ul>
+      <!-- sidebar: style can be found in sidebar.less -->
+     <!-- <button style="height: 150px;width: 150px;padding: 30px;margin: 20px;" class="btn-primary">
+       INVENTORY
+     </button> -->
+      <!-- /.sidebar -->
+    </aside>  
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="min-height: 583px;">
+    <!-- Content Header (Page header) -->
+    
+
+    <!-- Main content -->
+    <section style="margin-left: 75px;" class="content">
+      <!-- Info boxes -->
+    
+      <!-- /.row -->
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box" style="height: 100vh;;">
+            <div class="box-header with-border">
+              <!-- <h3 class="box-title">Monthly Recap Report</h3> -->
+
+             
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-12" style="width: 100%;">
+                  <iframe src="./index_files/home.html" style="border:white;height: 100vh;width: 100%;"></iframe>
+                  
+                  
+                  <!-- /.chart-responsive -->
+                </div>
+                <!-- /.col -->
+                
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+       
+            <!-- /.box-footer -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  
+
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="./index_files/jquery.min.js.download"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="./index_files/bootstrap.min.js.download"></script>
+<!-- FastClick -->
+<script src="./index_files/fastclick.js.download"></script>
+<!-- AdminLTE App -->
+<script src="./index_files/adminlte.min.js.download"></script>
+<!-- Sparkline -->
+<script src="./index_files/jquery.sparkline.min.js.download"></script>
+<!-- jvectormap  -->
+<script src="./index_files/jquery-jvectormap-1.2.2.min.js.download"></script>
+<script src="./index_files/jquery-jvectormap-world-mill-en.js.download"></script>
+<!-- SlimScroll -->
+<script src="./index_files/jquery.slimscroll.min.js.download"></script>
+<!-- ChartJS -->
+<script src="./index_files/Chart.js.download"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="./index_files/dashboard2.js.download"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="./index_files/demo.js.download"></script>
+<!-- DataTables -->
+
+
+
+</body></html>
